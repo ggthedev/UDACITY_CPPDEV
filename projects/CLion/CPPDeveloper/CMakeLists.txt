@@ -7,3 +7,4 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../../../build) #set the run time directory w
 
 #following defines a binary with name and source files needed to generate it
 add_executable(vectorsDance ../../../src/vectorsIntro.cpp)
+add_executable(final-proj ../../../src/udacppdev.cpp)
