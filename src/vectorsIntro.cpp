@@ -4,8 +4,11 @@ using namespace std;
 
 int main()
 {
-  vector<int> s = {1,2,3,4};
-  cout<<s;
+  vector<int> num = {1,2,3,4};
+for (auto i:num)
+{
+  cout<<i;
+}
   return 0;
 }
 
