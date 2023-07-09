@@ -11,6 +11,7 @@ int main (){
 
     for (const auto& i:board){
         // for loop which iterates inner vector
+        cout<<"Size of the inner vector is "<<i.size()<<endl;
         for (auto j:i){
             cout<<j;
         }
