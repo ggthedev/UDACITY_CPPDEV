@@ -16,30 +16,34 @@ vector<int> ParseLine (const string& line){
     return line_val;
 }
 
-void ReadBoardFile(const string& path) {
+vector<vector<int>> ReadBoardFile(const string& path) {
     ifstream boardFile(path);
+    vector<vector<int>> board;
+
     if (boardFile) {
         string line;
         while (getline(boardFile, line)) {
-            cout << line << "\n";
+            vector<int> row = ParseLine(line);
+            board.push_back(row);
         }
     }
+    return  board;
 }
 
 void PrintBoard(const vector<vector<int>>& board) {
     for(const auto & i : board) {
         for (int j : i) {
-            cout << j;
+            cout <<j<<" ";
         }
         cout << "\n";
     }
 }
 
 int main (){
-    ReadBoardFile(BOARD_FILE_PATH);
+    vector<vector<int>> board = ReadBoardFile(BOARD_FILE_PATH);
 //    vector<vector<int>> board = BOARD_VALUES;
-//    PrintBoard(board);
-    TestParseLine();
+    PrintBoard(board);
+//    TestParseLine();
     return EXIT_SUCCESS;
 }
 
