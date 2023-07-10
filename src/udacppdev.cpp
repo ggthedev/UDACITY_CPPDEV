@@ -25,6 +25,13 @@ vector<State> ParseLine(const string &line) {
     return line_val;
 }
 
+int Heuristic (int x1, int y1, int x2,int y2){
+    /*
+     * Manhattan distance: |x2-x1|+|y2-y1|
+     * */
+    return (abs(x2 - x1) + abs(y2 - y1));
+}
+
 vector<vector<State>> Search(vector<vector<State>> board, int start[2], int goal[2]) {
     vector<vector<State>> finalBoard;
     cout<<"No path found!!";
