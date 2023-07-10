@@ -1,4 +1,4 @@
-# List of Videos
+# List of Course Videos
 
 - <https://youtu.be/tXg6TiANbA4>
 - <https://youtu.be/5YqXKix5iwM>
