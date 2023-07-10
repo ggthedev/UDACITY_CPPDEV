@@ -50,37 +50,6 @@ void PrintBoard(const vector<vector<State>> &board) {
 
 int main() {
     vector<vector<State>> board = ReadBoardFile(BOARD_FILE_PATH);
-//    vector<vector<int>> board = BOARD_VALUES;
     PrintBoard(board);
-//    TestParseLine();
     return EXIT_SUCCESS;
 }
-
-void PrintVector(vector<int> v) {
-    cout << "{ ";
-    for (auto item: v) {
-        cout << item << " ";
-    }
-    cout << "}" << "\n";
-}
-
-////Testing the ParseLine method
-//void TestParseLine() {
-//    cout << "----------------------------------------------------------" << "\n";
-//    cout << "TestParseLine: ";
-//    string line = "0,1,0,0,0,0,";
-//    vector<int> solution_vect{0, 1, 0, 0, 0, 0};
-//    vector<int> test_vect;
-//    test_vect = ParseLine(line);
-//    if (test_vect != solution_vect) {
-//        cout << "failed" << "\n";
-//        cout << "\n" << "Test input string: " << line << "\n";
-//        cout << "Your parsed line: ";
-//        PrintVector(test_vect);
-//        cout << "\n";
-//    } else {
-//        cout << "passed" << "\n";
-//    }
-//    cout << "----------------------------------------------------------" << "\n";
-//    return;
-//}
