@@ -25,6 +25,12 @@ vector<State> ParseLine(const string &line) {
     return line_val;
 }
 
+vector<vector<State>> Search(vector<vector<State>> board, int start[2], int goal[2]) {
+    vector<vector<State>> finalBoard;
+    cout<<"No path found!!";
+    return  finalBoard;
+}
+
 vector<vector<State>> ReadBoardFile(const string &path) {
     ifstream boardFile(path);
     vector<vector<State>> board;
@@ -50,6 +56,10 @@ void PrintBoard(const vector<vector<State>> &board) {
 
 int main() {
     vector<vector<State>> board = ReadBoardFile(BOARD_FILE_PATH);
-    PrintBoard(board);
+    auto init = new int[0,0];
+    auto goal = new int[4,5];
+
+    auto  solution = Search(board, init, goal);
+    PrintBoard(solution);
     return EXIT_SUCCESS;
 }
