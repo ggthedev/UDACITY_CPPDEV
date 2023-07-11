@@ -127,7 +127,7 @@ void TestSearch() {
     cout << "Search Function Test: ";
     int init[2]{0, 0};
     int goal[2]{4, 5};
-    auto board = ReadBoardFile("1.board");
+    auto board = ReadBoardFile(BOARD_FILE_PATH);
 
     std::cout.setstate(std::ios_base::failbit); // Disable cout
     auto output = Search(board, init, goal);
@@ -138,7 +138,7 @@ void TestSearch() {
                                    {State::kPath, State::kObstacle, State::kEmpty, State::kClosed, State::kClosed, State::kClosed},
                                    {State::kPath, State::kObstacle, State::kClosed, State::kPath, State::kPath, State::kPath},
                                    {State::kPath, State::kPath, State::kPath, State::kPath, State::kObstacle, State::kFinish}};
-
+//    PrintVectorOfVectors(solution);
     if (output != solution) {
         cout << "failed" << "\n";
         cout << "Search(board, {0,0}, {4,5})" << "\n";
