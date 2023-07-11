@@ -32,6 +32,11 @@ int Heuristic(int x1, int y1, int x2, int y2) {
     return (abs(x2 - x1) + abs(y2 - y1));
 }
 
+//Sorts the list of open nodes using the compare function.
+void CellSort(vector<vector<int>> *v) {
+    sort(v->begin(), v->end(), Compare);
+}
+
 //Compares 2 nodes
 bool Compare(vector<int> n1, vector<int> n2) {
     return (n1[2] + n1[3] > n2[2] + n2[3]);
@@ -63,19 +68,25 @@ vector<vector<State>> Search(vector<vector<State>> board, int start[2], int goal
     int h = Heuristic(x, y, goal[0], goal[1]);
     AddToOpen(x, y, g, h, open, board);
     // TODO: while open vector is non empty {
-    // TODO: Sort the open list using CellSort, and get the current node.
+    while (!open.empty()){
+        // TODO: Sort the open list using CellSort, and get the current node.
+        CellSort(&open);
+        // TODO: Get the x and y values from the current node,and set grid[x][y] to kPath.
+        auto currentNode = open[0];
+        x = currentNode[0];
+        y = currentNode[1];
+        board[x][y] = State::kPath;
+        // TODO: Check if you've reached the goal. If so, return grid.
+        // If we're not done, expand search to current node's neighbors. This step will be completed in a later quiz.
+        // ExpandNeighbors
+        if (currentNode[0] == goal[0] && currentNode[1] == goal[1]){
+            return board;
+        }
+        else{
 
-    // TODO: Get the x and y values from the current node,
-    // and set grid[x][y] to kPath.
-
-    // TODO: Check if you've reached the goal. If so, return grid.
-
-
-    // If we're not done, expand search to current node's neighbors. This step will be completed in a later quiz.
-    // ExpandNeighbors
-
-    //} // TODO: End while loop
-
+        }
+        // TODO: End while loop
+    }
     cout << "No path found!!";
     return finalBoard;
 }
