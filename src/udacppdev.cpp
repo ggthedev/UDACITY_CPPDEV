@@ -4,16 +4,6 @@
 
 #include "udacppdev.h"
 
-void AddToOpen(int x, int y, int g, int h, vector<vector<int>> &openNodes, vector<vector<State>> &grid) {
-    vector<int> node = {x,y,g,h};
-    //    node[0] = static_cast<int>(State::kClosed);
-    //    node[1] = static_cast<int>(State::kClosed);
-    //Create a vector<int> node with the form {x, y, g, h} and push the node to the back of the open vector
-    openNodes.push_back(node);
-    //Set the grid value for the x and y coordinates to the enum value
-    grid[x][y] = State::kClosed;
-}
-
 string CellString(State cell) {
     switch (cell) {
         case State::kObstacle:
@@ -40,6 +30,21 @@ int Heuristic(int x1, int y1, int x2, int y2) {
      * Manhattan distance: |x2-x1|+|y2-y1|
      * */
     return (abs(x2 - x1) + abs(y2 - y1));
+}
+
+//Compares 2 nodes
+bool Compare(vector<int> n1,vector<int> n2){
+    return (n1[2]+n1[3] > n2[2]+n2[3]);
+}
+
+void AddToOpen(int x, int y, int g, int h, vector<vector<int>> &openNodes, vector<vector<State>> &grid) {
+    vector<int> node = {x,y,g,h};
+    //    node[0] = static_cast<int>(State::kClosed);
+    //    node[1] = static_cast<int>(State::kClosed);
+    //Create a vector<int> node with the form {x, y, g, h} and push the node to the back of the open vector
+    openNodes.push_back(node);
+    //Set the grid value for the x and y coordinates to the enum value
+    grid[x][y] = State::kClosed;
 }
 
 vector<vector<State>> Search(vector<vector<State>> board, int start[2], int goal[2]) {
