@@ -52,6 +52,26 @@ void AddToOpen(int x, int y, int g, int h, vector<vector<int>> &openNodes, vecto
     grid[x][y] = State::kClosed;
 }
 
+//Write a function bool CheckValidCell that accepts two ints for the x and y coordinates and a reference to the grid.
+//The function should do two things:
+//Check that the (x, y) coordinate pair is on the grid.
+//Check that the grid at (x, y) is kEmpty (this is the default case if the grid cell is not kClosed or a kObstacle).
+//If both of these conditions are true, then CheckValidCell should return true. Otherwise, it should return false.
+bool CheckValidCell(int x, int y, vector<vector<State>> &grid) {
+    /*give the fact grid is a 2-D data structure, first element of grid will represent the X value and hence the
+    size of the grid will give the greatest X. As a result check of x < X_max is a valid check if x is actually
+    on the grid or not. Similarly, the vector at position x in grid is representing the value at Y coordinate, in terms
+    of cartesian plane. Hence, max value of vector(inner) is max value of Y (Y_max) and if y < Y_max, y for the given
+    x is on the grid.*/
+
+    bool isXOnGrid = (x >= 0 && x < grid.size());
+    bool isYOnGrid = (y >= 0 && y < grid[0].size());
+    if (isXOnGrid && isYOnGrid)
+        return grid[x][y] == State::kEmpty;
+    return false;
+
+}
+
 vector<vector<State>> Search(vector<vector<State>> grid, int init[2], int goal[2]) {
     vector<vector<State>> finalBoard{};
     vector<vector<int>> open{};

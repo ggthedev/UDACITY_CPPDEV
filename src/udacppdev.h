@@ -23,4 +23,5 @@ enum class State {kEmpty, kObstacle, kClosed, kPath};
 void AddToOpen(int x, int y, int g, int h, vector<vector<int>> &openNodes,vector<vector<State>> &grid);
 void CellSort(vector<vector<int>> *v);
 bool Compare(vector<int> n1,vector<int> n2);
+bool CheckValidCell(int x, int y, vector<vector<State>> &grid);
 #endif //UDACPPDEV_H
