@@ -139,7 +139,7 @@ vector<vector<State>> Search(vector<vector<State>> grid, int init[2], int goal[2
         if (x == goal[0] && y == goal[1]) {
             return grid;
         }
-        ExpandNeighbors(currentNode, goal, open, grid);
+        ExpandNeighbors(currentNode, goal, open, grid); //this expands neighbour
         // TODO: End while loop
     }
     cout << "No path found!!";
