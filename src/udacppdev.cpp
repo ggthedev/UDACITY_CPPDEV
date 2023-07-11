@@ -52,7 +52,7 @@ void AddToOpen(int x, int y, int g, int h, vector<vector<int>> &openNodes, vecto
     grid[x][y] = State::kClosed;
 }
 
-vector<vector<State>> Search(vector<vector<State>> board, int start[2], int goal[2]) {
+vector<vector<State>> Search(vector<vector<State>> grid, int init[2], int goal[2]) {
     vector<vector<State>> finalBoard{};
     vector<vector<int>> open{};
 /*
@@ -62,27 +62,27 @@ vector<vector<State>> Search(vector<vector<State>> board, int start[2], int goal
  * Add first node to open vector using the AddToOpen function by passing the node values: x, y, g, and h,
  * along with the open and grid vectors.
  * */
-    int x = start[0];
-    int y = start[1];
+    int x = init[0];
+    int y = init[1];
     int g = 0;
     int h = Heuristic(x, y, goal[0], goal[1]);
-    AddToOpen(x, y, g, h, open, board);
+    AddToOpen(x, y, g, h, open, grid);
     // TODO: while open vector is non empty {
-    while (!open.empty()){
+    while (!open.empty()) {
         // TODO: Sort the open list using CellSort, and get the current node.
         CellSort(&open);
         // TODO: Get the x and y values from the current node,and set grid[x][y] to kPath.
-        auto currentNode = open[0];
+        auto currentNode = open.back(); //get the first node;
+        open.pop_back();
         x = currentNode[0];
         y = currentNode[1];
-        board[x][y] = State::kPath;
+        grid[x][y] = State::kPath;
         // TODO: Check if you've reached the goal. If so, return grid.
         // If we're not done, expand search to current node's neighbors. This step will be completed in a later quiz.
         // ExpandNeighbors
-        if (currentNode[0] == goal[0] && currentNode[1] == goal[1]){
-            return board;
-        }
-        else{
+        if (x == goal[0] && y == goal[1]) {
+            return grid;
+        } else {
 
         }
         // TODO: End while loop
