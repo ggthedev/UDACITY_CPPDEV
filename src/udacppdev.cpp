@@ -42,8 +42,21 @@ int Heuristic(int x1, int y1, int x2, int y2) {
     return (abs(x2 - x1) + abs(y2 - y1));
 }
 
-vector<vector<State>> Search(const vector<vector<State>>& board, int start[2], int goal[2]) {
-    vector<vector<State>> finalBoard;
+vector<vector<State>> Search(vector<vector<State>> board, int start[2], int goal[2]) {
+    vector<vector<State>> finalBoard {};
+    vector<vector<int>> open {};
+/*
+ * x and y are given by the init variable values,
+ * Set the initial cost g = 0,
+ * h is given by Heuristic function.
+ * Add first node to open vector using the AddToOpen function by passing the node values: x, y, g, and h,
+ * along with the open and grid vectors.
+ * */
+    int x = start[0];
+    int y = start[1];
+    int g = 0;
+    int h = Heuristic(x,y,goal[0],goal[1]);
+    AddToOpen(x,y,g,h,open, board);
     cout << "No path found!!";
     return finalBoard;
 }
