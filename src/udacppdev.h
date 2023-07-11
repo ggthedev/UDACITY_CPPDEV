@@ -20,4 +20,6 @@ const string BOARD_FILE_PATH = string("./../../src/").append(BOARD_FILE_NAME);
 void TestParseLine();
 enum class State {kEmpty, kObstacle, kClosed};
 void AddToOpen(int x, int y, int g, int h, vector<vector<int>> &openNodes,vector<vector<State>> &grid);
+//CellSort()
+bool Compare(vector<int> n1,vector<int> n2);
 #endif //UDACPPDEV_H
