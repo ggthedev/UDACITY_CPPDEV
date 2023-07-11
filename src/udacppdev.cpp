@@ -33,12 +33,12 @@ int Heuristic(int x1, int y1, int x2, int y2) {
 }
 
 //Compares 2 nodes
-bool Compare(vector<int> n1,vector<int> n2){
-    return (n1[2]+n1[3] > n2[2]+n2[3]);
+bool Compare(vector<int> n1, vector<int> n2) {
+    return (n1[2] + n1[3] > n2[2] + n2[3]);
 }
 
 void AddToOpen(int x, int y, int g, int h, vector<vector<int>> &openNodes, vector<vector<State>> &grid) {
-    vector<int> node = {x,y,g,h};
+    vector<int> node = {x, y, g, h};
     //    node[0] = static_cast<int>(State::kClosed);
     //    node[1] = static_cast<int>(State::kClosed);
     //Create a vector<int> node with the form {x, y, g, h} and push the node to the back of the open vector
@@ -48,8 +48,8 @@ void AddToOpen(int x, int y, int g, int h, vector<vector<int>> &openNodes, vecto
 }
 
 vector<vector<State>> Search(vector<vector<State>> board, int start[2], int goal[2]) {
-    vector<vector<State>> finalBoard {};
-    vector<vector<int>> open {};
+    vector<vector<State>> finalBoard{};
+    vector<vector<int>> open{};
 /*
  * x and y are given by the init variable values,
  * Set the initial cost g = 0,
@@ -60,8 +60,22 @@ vector<vector<State>> Search(vector<vector<State>> board, int start[2], int goal
     int x = start[0];
     int y = start[1];
     int g = 0;
-    int h = Heuristic(x,y,goal[0],goal[1]);
-    AddToOpen(x,y,g,h,open, board);
+    int h = Heuristic(x, y, goal[0], goal[1]);
+    AddToOpen(x, y, g, h, open, board);
+    // TODO: while open vector is non empty {
+    // TODO: Sort the open list using CellSort, and get the current node.
+
+    // TODO: Get the x and y values from the current node,
+    // and set grid[x][y] to kPath.
+
+    // TODO: Check if you've reached the goal. If so, return grid.
+
+
+    // If we're not done, expand search to current node's neighbors. This step will be completed in a later quiz.
+    // ExpandNeighbors
+
+    //} // TODO: End while loop
+
     cout << "No path found!!";
     return finalBoard;
 }
