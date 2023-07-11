@@ -3,6 +3,7 @@
 //
 
 #include "udacppdev.h"
+#include "TestBench.cpp"
 
 const int delta[4][2]{{-1, 0},
                       {0,  -1},
@@ -11,8 +12,14 @@ const int delta[4][2]{{-1, 0},
 
 string CellString(State cell) {
     switch (cell) {
+        case State::kPath:
+            return "🚗   ";
         case State::kObstacle:
             return "⛰️   ";
+        case State::kStart:
+            return "🚦   ";
+        case State::kFinish:
+            return "🏁   ";
         default:
             return "0    ";
     }
@@ -118,6 +125,7 @@ vector<vector<State>> Search(vector<vector<State>> grid, int init[2], int goal[2
  * Add first node to open vector using the AddToOpen function by passing the node values: x, y, g, and h,
  * along with the open and grid vectors.
  * */
+
     int x = init[0];
     int y = init[1];
     int g = 0;
@@ -134,11 +142,13 @@ vector<vector<State>> Search(vector<vector<State>> grid, int init[2], int goal[2
         y = currentNode[1];
         grid[x][y] = State::kPath;
         // TODO: Check if you've reached the goal. If so, return grid.
-        // If we're not done, expand search to current node's neighbors. This step will be completed in a later quiz.
-        // ExpandNeighbors
         if (x == goal[0] && y == goal[1]) {
+            grid[init[0]][init[1]] = State::kStart;
+            grid[goal[0]][goal[1]] = State::kFinish;
             return grid;
         }
+        // If we're not done, expand search to current node's neighbors. This step will be completed in a later quiz.
+        // ExpandNeighbors
         ExpandNeighbors(currentNode, goal, open, grid); //this expands neighbour
         // TODO: End while loop
     }
@@ -176,5 +186,13 @@ int main() {
 
     auto solution = Search(board, init, goal);
     PrintBoard(solution);
+    // Tests
+    TestHeuristic();
+    TestAddToOpen();
+    TestCompare();
+    TestSearch();
+    TestCheckValidCell();
+    TestExpandNeighbors();
+
     return EXIT_SUCCESS;
 }

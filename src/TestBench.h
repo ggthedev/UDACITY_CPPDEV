@@ -5,4 +5,5 @@
 #ifndef CPPDEVELOPER_TESTBENCH_H
 #define CPPDEVELOPER_TESTBENCH_H
 #include "udacppdev.h"
+void TestParseLine();
 #endif //CPPDEVELOPER_TESTBENCH_H
