@@ -4,6 +4,16 @@
 
 #include "udacppdev.h"
 
+void AddToOpen(int x, int y, int g, int h, vector<vector<int>> &openNodes, vector<vector<State>> &grid) {
+    vector<int> node = {x,y,g,h};
+    //    node[0] = static_cast<int>(State::kClosed);
+    //    node[1] = static_cast<int>(State::kClosed);
+    //Create a vector<int> node with the form {x, y, g, h} and push the node to the back of the open vector
+    openNodes.push_back(node);
+    //Set the grid value for the x and y coordinates to the enum value
+    grid[x][y] = State::kClosed;
+}
+
 string CellString(State cell) {
     switch (cell) {
         case State::kObstacle:
@@ -25,7 +35,7 @@ vector<State> ParseLine(const string &line) {
     return line_val;
 }
 
-int Heuristic (int x1, int y1, int x2,int y2){
+int Heuristic(int x1, int y1, int x2, int y2) {
     /*
      * Manhattan distance: |x2-x1|+|y2-y1|
      * */
@@ -34,8 +44,8 @@ int Heuristic (int x1, int y1, int x2,int y2){
 
 vector<vector<State>> Search(vector<vector<State>> board, int start[2], int goal[2]) {
     vector<vector<State>> finalBoard;
-    cout<<"No path found!!";
-    return  finalBoard;
+    cout << "No path found!!";
+    return finalBoard;
 }
 
 vector<vector<State>> ReadBoardFile(const string &path) {
@@ -57,16 +67,16 @@ void PrintBoard(const vector<vector<State>> &board) {
         for (State j: i) {
             cout << CellString(j);
         }
-        cout <<"\n";
+        cout << "\n";
     }
 }
 
 int main() {
     vector<vector<State>> board = ReadBoardFile(BOARD_FILE_PATH);
-    auto init = new int[0,0];
-    auto goal = new int[4,5];
+    auto init = new int[0, 0];
+    auto goal = new int[4, 5];
 
-    auto  solution = Search(board, init, goal);
+    auto solution = Search(board, init, goal);
     PrintBoard(solution);
     return EXIT_SUCCESS;
 }

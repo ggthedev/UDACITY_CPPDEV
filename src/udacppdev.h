@@ -18,5 +18,6 @@ using namespace std;
 const string BOARD_FILE_NAME = "1.board";
 const string BOARD_FILE_PATH = string("./../../src/").append(BOARD_FILE_NAME);
 void TestParseLine();
-enum class State {kEmpty, kObstacle};
+enum class State {kEmpty, kObstacle, kClosed};
+void AddToOpen(int x, int y, int g, int h, vector<vector<int>> &openNodes,vector<vector<State>> &grid);
 #endif //UDACPPDEV_H
