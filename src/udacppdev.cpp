@@ -4,6 +4,11 @@
 
 #include "udacppdev.h"
 
+const int delta[4][2]{{-1, 0},
+                      {0,  -1},
+                      {1,  0},
+                      {0,  1}};
+
 string CellString(State cell) {
     switch (cell) {
         case State::kObstacle:
@@ -72,6 +77,37 @@ bool CheckValidCell(int x, int y, vector<vector<State>> &grid) {
 
 }
 
+/*
+Write a void ExpandNeighbors function that accepts references to the following:
+The current node,
+the open vector,
+the grid, and
+an int array for the goal coordinates.
+*/
+
+void ExpandNeighbors(vector<int> current, int goal[2], vector<vector<int>> &open, vector<vector<State>> &grid) {
+// TODO: ExpandNeighbors {
+    // TODO: Get current node's data.
+    int x = current[0];
+    int y = current[1];
+    int g = current[2];
+
+    // TODO: Loop through current node's potential neighbors.
+    //generate potential neighbor via x++, x--, y++, y-- => achieved by using directional deltas
+    for (int i = 0; i < 4; ++i) {
+        int n_x2 = x + delta[i][0];
+        int n_y2 = y + delta[i][1];
+        // TODO: Check that the potential neighbor's x2 and y2 values are on the grid and not closed.
+        if (CheckValidCell(n_x2, n_y2, grid)) {
+            // TODO: Increment g value, compute h value, and add neighbor to open list.
+            int g2 = g + 1;
+            int h = Heuristic(n_x2, n_y2, goal[0], goal[1]);
+            AddToOpen(n_x2, n_y2, g2, h, open, grid);
+        }
+    }
+// } TODO: End function
+}
+
 vector<vector<State>> Search(vector<vector<State>> grid, int init[2], int goal[2]) {
     vector<vector<State>> finalBoard{};
     vector<vector<int>> open{};
@@ -102,9 +138,8 @@ vector<vector<State>> Search(vector<vector<State>> grid, int init[2], int goal[2
         // ExpandNeighbors
         if (x == goal[0] && y == goal[1]) {
             return grid;
-        } else {
-
         }
+        ExpandNeighbors(currentNode, goal, open, grid);
         // TODO: End while loop
     }
     cout << "No path found!!";
