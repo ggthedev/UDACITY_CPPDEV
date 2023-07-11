@@ -42,7 +42,7 @@ int Heuristic(int x1, int y1, int x2, int y2) {
     return (abs(x2 - x1) + abs(y2 - y1));
 }
 
-vector<vector<State>> Search(vector<vector<State>> board, int start[2], int goal[2]) {
+vector<vector<State>> Search(const vector<vector<State>>& board, int start[2], int goal[2]) {
     vector<vector<State>> finalBoard;
     cout << "No path found!!";
     return finalBoard;
