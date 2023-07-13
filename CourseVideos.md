@@ -40,5 +40,19 @@ https://youtu.be/ItIdjPEhHdg
 - https://youtu.be/3COOvy3f0UA
 - https://youtu.be/7DncZWgHTno
 - https://youtu.be/WURLUIt8Q9Q
-- 
+- https://youtu.be/-orQxTCLOuw
+- https://youtu.be/GNXp-PLjKbE
+- https://youtu.be/C79dfjxHruo
+- https://youtu.be/EXCq7OTqrkI
+- https://youtu.be/HqL3a6T8mLg
+- https://youtu.be/p_aqFUIIod0
+- https://youtu.be/2kmw8sFyvbk
+- https://youtu.be/afs_qS7-bvo
+
+OBJECTED ORIENTED PROGRAMMING 
+
+1. https://youtu.be/8V271hq1dfE
+2. 
+
+
 
