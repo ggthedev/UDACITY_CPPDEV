@@ -1,5 +1,7 @@
 # List of Course Videos
 
+## C++ Foundations
+
 - <https://youtu.be/tXg6TiANbA4>
 - <https://youtu.be/5YqXKix5iwM>
 - <https://youtu.be/qUNRDSeM4uA>
@@ -16,9 +18,9 @@
 - <https://youtu.be/AfwagT0JJO0>
 - <https://youtu.be/KU2GjMbxnXo>
 
-https://youtu.be/lxCCtgHk5Vs
+​		https://youtu.be/lxCCtgHk5Vs
 
-https://youtu.be/ItIdjPEhHdg
+​		https://youtu.be/ItIdjPEhHdg
 
 - https://youtu.be/8pdt3E4wsCU
 - https://youtu.be/XlEVpwKHkMY
@@ -49,10 +51,40 @@ https://youtu.be/ItIdjPEhHdg
 - https://youtu.be/2kmw8sFyvbk
 - https://youtu.be/afs_qS7-bvo
 
-OBJECTED ORIENTED PROGRAMMING 
+## OBJECTED ORIENTED PROGRAMMING 
 
 1. https://youtu.be/8V271hq1dfE
-2. 
+2. https://youtu.be/pqPvz33zVkE
+3. https://youtu.be/pUoA2pFOxbI
+4. https://youtu.be/_uuC7FphqcA
+5. https://youtu.be/leLjGXFcycE
+6. https://youtu.be/iKIEdY_pdzY
+7. https://youtu.be/ZEt2LTRc2D0
+8. https://youtu.be/FTzrwV2LP5g
+9. https://youtu.be/KXojXgyW-O8
+10. https://youtu.be/M27atfK73_s
+11. https://youtu.be/zw5fqCmxD8o
+12. https://youtu.be/U2ItvJEwuHQ
+13. https://youtu.be/cqKuYu1oiow
+14. https://youtu.be/Ms4Li58ZvwA
+15. https://youtu.be/1-j6AxEoK3c
+16. https://youtu.be/HfVOiSpzFaA
+17. https://youtu.be/-WRtCE3MZB8
+18. https://youtu.be/g3CM02Bnamk
+19. https://youtu.be/--WHwiY1Z1k
+20. https://youtu.be/eUf7QBJNIFc
+21. https://youtu.be/C0MJyP0dOhU
+22. https://youtu.be/S5iKMpA-gFE
+23. https://youtu.be/Z75_sEnapD4
+24. https://youtu.be/7fBkcIL6d8k
+25. https://youtu.be/8ezbkN76msY
+26. https://youtu.be/Jo1NTa-krEE
+
+## POLY AND INHERITANCE
+
+1. https://youtu.be/91JxGNiQdSE
+2. https://youtu.be/pxDZ7VuyaHI
+3. 
 
 
 
