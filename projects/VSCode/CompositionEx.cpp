@@ -3,8 +3,6 @@
 #include <cmath>
 #include <iostream>
 using namespace std;
-// Define pi
-#define pi 3.14159
 
 // Define Line Class
 class LineSegment {
