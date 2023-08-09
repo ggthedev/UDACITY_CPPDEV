@@ -85,7 +85,71 @@
 1. https://youtu.be/91JxGNiQdSE
 2. https://youtu.be/pxDZ7VuyaHI
 3. https://youtu.be/qu4dDc-xARM
-4. 
+4. https://youtu.be/LVWK1aJiN40
+5. https://youtu.be/iUkRGy6kK4A
+6. https://youtu.be/GxdPV4mz7wg
+7. https://youtu.be/Y-SSHBtvPHo
+8. https://youtu.be/2krvZ3-INUk
+9. https://youtu.be/u15HcpiBeRc
+10. https://youtu.be/ejJ8uoPtFoo
+11. https://youtu.be/2krvZ3-INUk
+12. https://youtu.be/u15HcpiBeRc
+13. https://youtu.be/C2DNR0Ao0VM
+14. https://youtu.be/jEoPLBdLLsw
+15. https://youtu.be/p29phGPfKnQ
+16. https://youtu.be/k2Hai5sBemU
+17. https://youtu.be/m3a4ojP0dVQ
+18. https://youtu.be/bUphr3EuM8A
+19. https://youtu.be/tnOsS8JEO0U
+20. https://youtu.be/JJLGNlQ1QLk
+21. https://youtu.be/QR68Vcr-XTw
+22. https://youtu.be/gWcAMxhNOcg
+23. https://youtu.be/EbgJYBZ4QDA
+
+## **SYSTEM MONITOR** ##
+
+1. https://youtu.be/Cz4rDC-WecA
+2. https://youtu.be/eguBVmzhTS4
+3. https://youtu.be/dOnUD8UUhMg
+4. https://youtu.be/10HWAXzY_90
+5. https://youtu.be/PSPI33rKQas
+6. https://youtu.be/M6tpsAZWnjI
+7. https://youtu.be/M6tpsAZWnjI
+8. https://youtu.be/f9Qt2AlPQeE
+9. https://youtu.be/vFhTd8HyiJw
+10. https://youtu.be/eMkJE3y9bwo
+11. https://youtu.be/sEkf6TqLKBk
+12. https://youtu.be/xw6_Mz3O54Y
+
+## **Memory Management** ##
+
+1. https://youtu.be/hYu3mxQzKNY
+2. https://youtu.be/f92guZr2jWo
+3. https://youtu.be/Rt2p5Pgnb8g
+4. https://youtu.be/OAU28NfySsQ
+5. https://youtu.be/q1C7lBXNGn0
+6. https://youtu.be/-p99igKSazc
+7. https://youtu.be/Spj2jK1-uIE
+8. https://youtu.be/Lopa5WXR1uQ
+9. https://youtu.be/9oESTYFVCV8
+10. https://youtu.be/hUKRiLAj0EM
+11. https://youtu.be/cfnC4fBeWfU
+12. https://youtu.be/FNaaBipEqBw
+13. https://youtu.be/Gfrfp1GtIUU
+14. https://youtu.be/izXHpEad7hY
+15. https://youtu.be/mY3j60e4ZIs
+16. https://youtu.be/yaDdy3j_lYE
+17. https://youtu.be/tTx08nfDWp0
+18. https://youtu.be/JrxMUJWfKhA
+19. https://youtu.be/PlBDxf5ujyo
+20. https://youtu.be/W62TL4_NhEs
+21. https://youtu.be/gXdpjZiL7m8
+22. https://youtu.be/xBO3kdZTHyc
+23. https://youtu.be/S4NSWgZyvT4
+24. https://youtu.be/t8i6V0l-Awg
+25. 
+
+
 
 
 
